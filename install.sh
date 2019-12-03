@@ -21,15 +21,16 @@ echo "Installing dependencies..."
 echo "=========================="
 apt update && apt -y install python3 python3-pip omxplayer ntfs-3g exfat-fuse usbmount
 
-cp -a startvideos.sh /home/pi/
-cp -a startfullscreen.sh /home/pi/
-cp -a videoloop /etc/init.d/
-cp -a autostart.sh /home/pi/
-cp -a videoloop_starter /etc/cron.d/
-cp -a looperconfig.txt /boot/
+cp startvideos.sh /home/pi/
+cp startfullscreen.sh /home/pi/
+cp videoloop /etc/init.d/
+cp autostart.sh /home/pi/
+cp videoloop_starter /etc/cron.d/
+cp looperconfig.txt /boot/
 update-rc.d videoloop defaults
 
 mkdir /media/USB
+cp media/garmin.mp4 /home/pi/media/USB
 chmod a+r /media/USB
 echo "/dev/sda1	/media/USB	ntfs-3g	defaults,noatime,nodiratime 	0	0" >> /etc/fstab
 echo "Done!" you will need to reboot after this
