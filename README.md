@@ -1,8 +1,5 @@
-RPiVideoLooper
+DYNAMIC VIDEOWALL
 ==============
-![alt tag](https://raw.github.com/StevenHickson/RPiVideoLooper/master/looper.png)
-
-Video Looper for the Raspberry Pi
 
 There are 3 main scripts.
 
